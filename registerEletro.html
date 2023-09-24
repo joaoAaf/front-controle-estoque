@@ -27,30 +27,34 @@
 
     <main class="px-3">
       <div id="register_div">
-        <h2 class="text-center">Cadastro de Usuário</h2>
+        <h2 class="text-center">Cadastro de Eletroportáteis</h2>
         <form id="register" class="row g-3" method="post">
           <div class="col-md-6">
-            <label for="name" class="form-label">Nome</label>
+            <label class="form-label">Nome</label>
             <input type="text" class="form-control" id="inputNome" required="required">
           </div>
           <div class="col-md-6">
-            <label for="userName" class="form-label">Usuário</label>
-            <input type="text" class="form-control" id="inputUserName" required="required">
+            <label class="form-label">Categoria</label>
+            <input type="text" class="form-control" id="inputCategoria" required="required">
           </div>
           <div class="col-md-6">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="inputEmail" required="required">
+            <label class="form-label">Potência</label>
+            <input type="number" class="form-control" id="inputPotencia" required="required">
           </div>
           <div class="col-md-6">
-            <label for="department" class="form-label">Departamento</label>
-            <input type="text" class="form-control" id="inputDepartment" required="required">
+            <label class="form-label">Voltagem</label>
+            <input type="number" class="form-control" id="inputVoltagem" required="required">
           </div>
-          <div class="col-md-12">
-            <label for="password" class="form-label">Senha</label>
-            <input type="password" class="form-control" id="inputPassword" required="required">
+          <div class="col-md-6">
+            <label class="form-label">Quantidade em Estoque</label>
+            <input type="number" class="form-control" id="inputEstoque">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Preço</label>
+            <input type="number" class="form-control" id="inputPreco" required="required">
           </div>
           <div class="col-12">
-            <button type="submit" class="btn btn-light">Fazer Cadastro</button>
+            <button type="submit" class="btn btn-light">Cadastrar Produto</button>
           </div>
         </form>
       </div>
