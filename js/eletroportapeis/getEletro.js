@@ -1,13 +1,3 @@
-const url = "https://parseapi.back4app.com/parse/classes/Eletroportateis"
-
-const headers = {
-    headers: {
-        "X-Parse-Application-Id": "Fu6z18WOdbbOdQbRUKqZrXfNUfoSHzJak7uat4RE",
-        "X-Parse-REST-API-Key": "1DKQFZevoYx4A2I02G13BRIO5U1C8vnWjWrUyflb",
-        "Content-Type": "application/json"
-    }
-}
-
 async function axiosGet() {
     axios.get(url, headers)
         .then(response => {
@@ -61,7 +51,7 @@ function getProduts(produtos) {
         tr.appendChild(td)
 
         td = document.createElement('td')
-        td.id = p.id + "6"
+        td.id = p.objectId + "6"
         let div = document.createElement('div')
         div.className = "d-grid gap-2"
         div.appendChild(addButton("Remover", 0, p.objectId))
@@ -80,4 +70,19 @@ function addButton(nome, num, id) {
     button.className = "btn btn-primary"
     button.onclick = function () { click(num, id) }
     return button
+}
+
+function click(num, id) {
+    if (num == 0) {
+        axiosDelete(id)
+    }
+    else if (num == 1) {
+        updateInit(id)
+    }
+    else if (num == 2) {
+        axiosUpdate(id, updateDone(id))
+    }
+    else if (num == 3) {
+        axiosCancel(id)
+    }
 }
