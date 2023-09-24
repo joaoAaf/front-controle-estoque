@@ -27,31 +27,26 @@ function getProduts(produtos) {
 
         td = document.createElement('td')
         td.id = p.objectId + "1"
-        td.innerHTML = p.category
+        td.innerHTML = p.brand
         tr.appendChild(td)
 
         td = document.createElement('td')
         td.id = p.objectId + "2"
-        td.innerHTML = p.power
+        td.innerHTML = p.description
         tr.appendChild(td)
 
         td = document.createElement('td')
         td.id = p.objectId + "3"
-        td.innerHTML = p.voltage
-        tr.appendChild(td)
-
-        td = document.createElement('td')
-        td.id = p.objectId + "4"
         td.innerHTML = p.stock
         tr.appendChild(td)
 
         td = document.createElement('td')
-        td.id = p.objectId + "5"
+        td.id = p.objectId + "4"
         td.innerHTML = p.price
         tr.appendChild(td)
 
         td = document.createElement('td')
-        td.id = p.objectId + "6"
+        td.id = p.objectId + "5"
         let div = document.createElement('div')
         div.className = "d-grid gap-2"
         div.appendChild(addButton("Remover", 0, p.objectId))
