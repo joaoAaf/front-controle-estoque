@@ -25,24 +25,21 @@ function updateInit(id) {
     td.appendChild(addInput("text", "Digite o nome", id + "i0"))
 
     td = document.getElementById(id + "1")
-    td.appendChild(addInput("text", "Digite a categoria", id + "i1"))
+    td.appendChild(addInput("text", "Digite a marca", id + "i1"))
 
     td = document.getElementById(id + "2")
-    td.appendChild(addInput("number", "Digite a potência", id + "i2"))
+    td.appendChild(addInput("text", "Digite a descrição", id + "i2"))
 
     td = document.getElementById(id + "3")
-    td.appendChild(addInput("number", "Digite a voltagem", id + "i3"))
+    td.appendChild(addInput("number", "Digite a quantidade", id + "i3"))
 
     td = document.getElementById(id + "4")
-    td.appendChild(addInput("number", "Digite a quantidade", id + "i4"))
+    td.appendChild(addInput("number", "Digite o preço", id + "i4"))
 
     td = document.getElementById(id + "5")
-    td.appendChild(addInput("number", "Digite o preço", id + "i5"))
-
-    td = document.getElementById(id + "6")
     tr.removeChild(td)
     td = document.createElement('td')
-    td.id = id + "6"
+    td.id = id + "5"
     let div = document.createElement('div')
     div.className = "d-grid gap-2"
     div.appendChild(addButton("Aplicar", 2, id))
@@ -65,8 +62,6 @@ function cancel(p, id) {
     tr.removeChild(td)
     td = document.getElementById(id + "5")
     tr.removeChild(td)
-    td = document.getElementById(id + "6")
-    tr.removeChild(td)
 
     td = document.createElement('td')
     td.id = p.objectId + "0"
@@ -75,31 +70,26 @@ function cancel(p, id) {
 
     td = document.createElement('td')
     td.id = p.objectId + "1"
-    td.innerHTML = p.category
+    td.innerHTML = p.brand
     tr.appendChild(td)
 
     td = document.createElement('td')
     td.id = p.objectId + "2"
-    td.innerHTML = p.power
+    td.innerHTML = p.description
     tr.appendChild(td)
 
     td = document.createElement('td')
     td.id = p.objectId + "3"
-    td.innerHTML = p.voltage
-    tr.appendChild(td)
-
-    td = document.createElement('td')
-    td.id = p.objectId + "4"
     td.innerHTML = p.stock
     tr.appendChild(td)
 
     td = document.createElement('td')
-    td.id = p.objectId + "5"
+    td.id = p.objectId + "4"
     td.innerHTML = p.price
     tr.appendChild(td)
 
     td = document.createElement('td')
-    td.id = p.objectId + "6"
+    td.id = p.objectId + "5"
     let div = document.createElement('div')
     div.className = "d-grid gap-2"
     div.appendChild(addButton("Remover", 0, p.objectId))
