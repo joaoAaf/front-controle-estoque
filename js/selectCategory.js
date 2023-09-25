@@ -8,7 +8,7 @@ function selectCategory() {
             window.location.href = ""
             break
         case 3:
-            window.location.href = ""
+            window.location.href = "html/hardware/gestaoHardware.html"
             break
         case 4:
             window.location.href = ""
