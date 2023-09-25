@@ -2,7 +2,7 @@ function selectCategory() {
     selected = document.getElementById("inputCategoria").selectedIndex
     switch (selected) {
         case 1:
-            window.location.href = "gestaoEletro.html"
+            window.location.href = "html/eletroportapeis/gestaoEletro.html"
             break
         case 2:
             window.location.href = ""

@@ -7,9 +7,9 @@ register.addEventListener("submit", async function (event) {
 
     const data = {
         "name": document.getElementById("inputNome").value,
-        "brand": document.getElementById("inputCategoria").value,
-        "description": document.getElementById("inputPotencia").value,
-        "stock": parseInt(document.getElementById("inputVoltagem").value),
+        "brand": document.getElementById("inputMarca").value,
+        "description": document.getElementById("inputDescricao").value,
+        "stock": parseInt(document.getElementById("inputEstoque").value),
         "price": parseFloat(document.getElementById("inputPreco").value)
     }
 
