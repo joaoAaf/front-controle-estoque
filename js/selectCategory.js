@@ -5,7 +5,7 @@ function selectCategory() {
             window.location.href = "html/eletroportapeis/gestaoEletro.html"
             break
         case 2:
-            window.location.href = ""
+            window.location.href = "html/beleza/gestaoBeleza.html"
             break
         case 3:
             window.location.href = "html/hardware/gestaoHardware.html"
