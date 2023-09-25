@@ -11,13 +11,13 @@ function selectCategory() {
             window.location.href = "html/hardware/gestaoHardware.html"
             break
         case 4:
-            window.location.href = ""
+            window.location.href = "html/smartphones/gestaoSmartphone.html"
             break
         case 5:
-            window.location.href = ""
+            window.location.href = "html/esporte/gestaoEsporte.html"
             break
         case 6:
-            window.location.href = ""
+            window.location.href = "html/audio/gestaoÁudio.html"
             break
         default:
             alert("Selecione uma categoria!")

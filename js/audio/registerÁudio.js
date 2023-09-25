@@ -1,5 +1,5 @@
 
-const url = "https://parseapi.back4app.com/parse/classes/Smartphone"
+const url = "https://parseapi.back4app.com/parse/classes/Áudio"
 const register = document.getElementById("register")
 
 register.addEventListener("submit", async function (event) {
