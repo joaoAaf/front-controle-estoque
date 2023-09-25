@@ -1,3 +1,26 @@
+async function axiosUpdate(id, produt) {
+    axios.get(`${url}/${id}`, headers)
+        .then(response => {
+            const oldProdut = response.data
+            produt.name = empty(produt.name, oldProdut.name)
+            produt.brand = empty(produt.brand, oldProdut.brand)
+            produt.description = empty(produt.description, oldProdut.description)
+            produt.stock = parseInt(empty(produt.stock, oldProdut.stock))
+            produt.price = parseFloat(empty(produt.price, oldProdut.price))
+            axios.put(`${url}/${id}`, produt, headers)
+                .then(() => {
+                    alert("Produto Atualizado!")
+                    axiosCancel(id)
+                })
+                .catch(error => {
+                    console.log(error)
+                })
+        })
+        .catch(error => {
+            console.log(error)
+        })
+}
+
 async function axiosCancel(id) {
     axios.get(`${url}/${id}`, headers)
         .then(response => {
@@ -96,4 +119,33 @@ function cancel(p, id) {
     div.appendChild(addButton("Alterar", 1, p.objectId))
     td.appendChild(div)
     tr.appendChild(td)
+}
+
+function updateDone(id) {
+    let input = document.getElementById(id + "i0")
+    let name = input.value
+    input = document.getElementById(id + "i1")
+    let brand = input.value
+    input = document.getElementById(id + "i2")
+    let description = input.value
+    input = document.getElementById(id + "i3")
+    let stock = input.value
+    input = document.getElementById(id + "i4")
+    let price = input.value
+
+    let produt = {
+        name: name,
+        brand: brand,
+        description: description,
+        stock: stock,
+        price: price
+    }
+    return produt
+}
+
+function empty(newProdut, oldProdut) {
+    if (newProdut === '') {
+        return oldProdut
+    }
+    return newProdut
 }
