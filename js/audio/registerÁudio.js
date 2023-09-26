@@ -1,5 +1,5 @@
 
-const url = "https://parseapi.back4app.com/parse/classes/Áudio"
+const url = "https://parseapi.back4app.com/parse/classes/Audio"
 const register = document.getElementById("register")
 
 register.addEventListener("submit", async function (event) {
@@ -9,9 +9,8 @@ register.addEventListener("submit", async function (event) {
         "Nome": document.getElementById("inputNome").value,
         "Marca": document.getElementById("inputMarca").value,
         "Descricao": document.getElementById("inputDescricao").value,
-        "QuantidadeEstoque": 
-          parseInt(document.getElementById("inputQuantidadeEstoque").value),
-        "Preco": parseFloat(document.getElementById("inputPreco").value)
+        "QuantidadeEstoque": document.getElementById("inputQuantidadeEstoque").value,
+        "Preco": document.getElementById("inputPreco").value
     }
 
     const headers = {

@@ -5,9 +5,9 @@ async function axiosUpdate(id, produt) {
             produt.Nome = empty(produt.Nome, oldProdut.Nome)
             produt.Marca = empty(produt.Marca, oldProdut.Marca)
             produt.Descricao = empty(produt.Descricao, oldProdut.Descricao)
-            produt.QuantidadeEstoque = parseInt(empty(produt.QuantidadeEstoque,  
-              oldProdut.QuantidadeEstoque))
-            produt.Preco = parseFloat(empty(produt.Preco, oldProdut.Preco))
+            produt.QuantidadeEstoque = empty(produt.QuantidadeEstoque,  
+              oldProdut.QuantidadeEstoque)
+            produt.Preco = empty(produt.Preco, oldProdut.Preco)
             axios.put(`${url}/${id}`, produt, headers)
                 .then(() => {
                     alert("Produto Atualizado!")

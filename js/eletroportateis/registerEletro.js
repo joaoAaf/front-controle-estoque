@@ -1,4 +1,3 @@
-
 const url = "https://parseapi.back4app.com/parse/classes/Eletroportateis"
 const register = document.getElementById("register")
 
